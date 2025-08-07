@@ -1,5 +1,6 @@
 # FlipFlopWheel
-Maus Scroll-Richtung ändern
+Maus Scroll-Richtung auf "natürlich" wie am MacBook ändern
 
+```
 Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Enum\HID\*\*\Device` Parameters FlipFlopWheel -EA 0 | ForEach-Object { Set-ItemProperty $_.PSPath FlipFlopWheel 1 }
-
+```
